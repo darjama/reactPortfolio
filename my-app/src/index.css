@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.headerRouter {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.routeLink {
+  margin: 10px 16px;
+}
+
+.route {
+  top: 50px;
+  width: 100%;
+  z-index: -1;
+}
