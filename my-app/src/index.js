@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, NavLink, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Resume from './resume.js';
@@ -11,9 +11,11 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
   <Router>
     <div className='headerRouter'>
-      <Link className='routeLink' to="/">Home</Link>
-      <Link className='routeLink' to="/resume">Resume</Link>
-      <Link className='routeLink' to="/applications">Applications</Link>
+      <NavLink className='routeLink' to="/" activeClassName="activeRoute" exact>About Me</NavLink>
+      <NavLink className='routeLink' to="/resume" activeClassName="activeRoute">Resume</NavLink>
+      <NavLink className='routeLink' to="/applications"activeClassName="activeRoute" >Applications</NavLink>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
     </div>
     <div className='route'>
       <Route exact={true} path="/" component={App} />
