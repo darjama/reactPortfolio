@@ -2,37 +2,133 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.headerRouter {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: #555;
+  color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  font-size: 17px;
+  text-align: right;
+}
+
+.headerRouter NavLink {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.routeLink {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: all .3s ease-in-out;
+}
+
+.routeLink:hover{
+  transition: all .3s ease-in-out;
+  color: rgb(149, 171, 194);
+}
+
+.routeLink.activeRoute{
+  text-decoration-line: underline;
+}
+
+.route {
+  top: 50px;
+  width: 100%;
+  padding: 5px;
+  z-index: -1;
+}
+
+span.icon {
+  display: none;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .routeLink:not(.activeRoute){
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .routeLink.activeRoute{
+    text-decoration-line: none;
   }
+
+  .headerRouter span.icon {
+    margin: 3px;
+    float: right;
+    display: block;
+  }
+}
+.logoHeader {
+  margin: 0 0 0 0;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #f1f1f1;
+  flex-grow: 1;
+  text-align: left;
+}
+
+img.logo {
+  padding-right: 2px;
+  max-height: 25px;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+.closedBurger{
+  height: 0px;
+  position: absolute;
+  right: 0;
+  background-color: #555;
+  z-index: 2;
+  transition: height .3s;
+  min-width: 150px;
+}
+
+.openBurger{
+  display:flex;
+  flex-direction: column;
+  background-color: #555;
+  right: 0;
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 20px;
+  height: 100px;
+  width: 150px;
+  position: absolute;
+  z-index: 2;
+  transition: height .3s;
+}
+
+.burgerLink{
+  color: #f1f1f1;
+  font-weight: 800;
+  text-decoration: none;
+  order: 1;
+}
+
+.burgerLink.activeRoute{
+  display: none;
 }

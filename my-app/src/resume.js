@@ -4,7 +4,7 @@ import './resume.css'
 
 const Resume = () => {
     return (
-        <div>
+        <div className="container">
           <div className="dlButtons">
           <a href='./DarylMarcoResume.pdf' download='DarylMarcoResume.pdf' > <button>Download as PDF</button></a>
           <a href='./DarylMarcoResume.pdf.docx' download='DarylMarcoResume.docx' > <button> Download as Word Document</button></a>
@@ -15,7 +15,7 @@ const Resume = () => {
 
             }}
             scale={1.25}
-            hideNavbar="true"
+            hideNavbar={true}
         />
         </div>
 
