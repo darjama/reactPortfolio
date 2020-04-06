@@ -7,10 +7,14 @@ const Applications = () => {
         <p>
         Here is a collection of software applications I've worked on:
         </p>
-        <span className='hvr-float-shadow'>SofaMart</span>
-        <span className='hvr-float-shadow'>Craftworkery</span>
-        <span className='hvr-float-shadow'>My New Fave</span>
-        <span className='hvr-float-shadow'>ConnectSquares</span>
+        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+        <div className='appTitle'>SofaMart</div>
+        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+        <div className='appTitle'>Craftworkery</div>
+        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+        <div className='appTitle'>My New Fave</div>
+        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+        <div className='appTitle'>ConnectSquares</div>
       </div>
     )
 }
