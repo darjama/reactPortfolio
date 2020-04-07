@@ -1,5 +1,6 @@
 .applications{
-  font-weight: 525;
+  font-weight: 700;
+  font-family: 'Baloo Paaji 2';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +14,8 @@
 }
 .appTitle {
   width: 500px;
-  padding: 10px;
+  font-size: 24px;
+  padding: 6px;
   justify-content: center;
   background-color: white;
   position: relative;
