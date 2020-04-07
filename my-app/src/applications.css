@@ -23,6 +23,7 @@
 .appBody{
   flex-grow: 2;
   min-width: 550px;
+  width: 80%;
   height: 250px;
   margin: 20px 5px 1px 1px;
   padding: 30px 10px 10px 10px;
