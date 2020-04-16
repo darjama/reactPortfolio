@@ -61,7 +61,7 @@ class App extends React.Component{
           </div>
             {this.burgerItems()}
           <div className='route'>
-            <div id='about' className='topSpacer'><div className='topSpacer'/><About /></div>
+            <div id='about'><About /></div>
             <div id='applications'><div className='topSpacer'/><Applications /> </div>
             <div id='resume'><div className='topSpacer'/><Resume /></div>
             {/* <Route exact={true} path="/" component={About} />

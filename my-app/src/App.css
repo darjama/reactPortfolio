@@ -53,7 +53,7 @@
 .route {
   top: 50px;
   width: 100%;
-  padding: 5px;
+  padding: 0px;
   z-index: -1;
 }
 
@@ -64,6 +64,7 @@ span.icon {
 .topSpacer {
   min-height: 50px;
 }
+
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
