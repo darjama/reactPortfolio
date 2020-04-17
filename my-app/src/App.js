@@ -1,8 +1,7 @@
 import React from 'react';
 import About from './About.js';
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { Route, NavLink, BrowserRouter as Router } from 'react-router-dom';
 import Resume from './resume.js';
 import Applications from './applications.js';
 
@@ -25,9 +24,9 @@ class App extends React.Component{
     if (this.state.isMenuOpen) {
       return (
         <div className="openBurger">
-          <NavLink className='burgerLink' smooth to="#about" activeClassName="activeRoute" onClick={this.clickHandler} exact>About Me<br/></NavLink>
-          <NavLink className='burgerLink' smooth to="#applications" activeClassName="activeRoute" onClick={this.clickHandler}>Applications</NavLink>
-          <NavLink className='burgerLink' smooth to="#resume" activeClassName="activeRoute" onClick={this.clickHandler}>Resume<br/></NavLink>
+          <NavLink className='burgerLink' to="/" activeClassName="activeRoute" onClick={this.clickHandler} exact>About Me<br/></NavLink>
+          <NavLink className='burgerLink' to="/applications" activeClassName="activeRoute" onClick={this.clickHandler}>Applications</NavLink>
+          <NavLink className='burgerLink' to="/resume" activeClassName="activeRoute" onClick={this.clickHandler}>Resume<br/></NavLink>
         </div>
       )
     } else {
@@ -39,9 +38,9 @@ class App extends React.Component{
 
   routerItems = (
     <div>
-      <NavLink className='routeLink' smooth to="#about" activeClassName="activeRoute" exact>About Me</NavLink>
-      <NavLink className='routeLink' smooth to="#applications" activeClassName="activeRoute" >Applications</NavLink>
-      <NavLink className='routeLink' smooth to="#resume" activeClassName="activeRoute">Resume</NavLink>
+      <NavLink className='routeLink' to="/" activeClassName="activeRoute" exact>About Me</NavLink>
+      <NavLink className='routeLink' to="/applications" activeClassName="activeRoute" >Applications</NavLink>
+      <NavLink className='routeLink' to="/resume" activeClassName="activeRoute">Resume</NavLink>
     </div>
           )
 
@@ -61,12 +60,12 @@ class App extends React.Component{
           </div>
             {this.burgerItems()}
           <div className='route'>
-            <div id='about'><About /></div>
+            {/* <div id='about'><About /></div>
             <div id='applications'><div className='topSpacer'/><Applications /> </div>
-            <div id='resume'><div className='topSpacer'/><Resume /></div>
-            {/* <Route exact={true} path="/" component={About} />
+            <div id='resume'><div className='topSpacer'/><Resume /></div> */}
+            <Route exact={true} path="/" component={About} />
             <Route path="/resume" component={Resume} />
-            <Route path="/applications" component={Applications} /> */}
+            <Route path="/applications" component={Applications} />
           </div>
         </Router>
       </div>
