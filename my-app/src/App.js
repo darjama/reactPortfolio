@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import About from './About.js';
 import './App.css';
-import { Route, NavLink, BrowserRouter as Router } from 'react-router-dom';
+
 import Resume from './resume.js';
 import Applications from './applications.js';
 
@@ -15,6 +16,42 @@ class App extends React.Component{
     this.burgerItems = this.burgerItems.bind(this);
   }
 
+  componentDidMount() {
+
+    Events.scrollEvent.register('begin', function(to, element) {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function(to, element) {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }
+
+  // scrollToTop() {
+  //   scroll.scrollToTop();
+  // }
+  // scrollToBottom() {
+  //   scroll.scrollToBottom();
+  // }
+  // scrollTo() {
+  //   scroll.scrollTo(100);
+  // }
+  // scrollMore() {
+  //   scroll.scrollMore(100);
+  // }
+  // handleSetActive(to) {
+  //   console.log(to);
+
+  // }
+
   clickHandler(e){
     //e.preventDefault();
     this.setState({isMenuOpen: !this.state.isMenuOpen})
@@ -24,9 +61,9 @@ class App extends React.Component{
     if (this.state.isMenuOpen) {
       return (
         <div className="openBurger">
-          <NavLink className='burgerLink' to="/" activeClassName="activeRoute" onClick={this.clickHandler} exact>About Me<br/></NavLink>
-          <NavLink className='burgerLink' to="/applications" activeClassName="activeRoute" onClick={this.clickHandler}>Applications</NavLink>
-          <NavLink className='burgerLink' to="/resume" activeClassName="activeRoute" onClick={this.clickHandler}>Resume<br/></NavLink>
+          <Link className='burgerLink' activeClass='activeRoute' to="about" spy={true} smooth={true} duration={500} onClick={this.clickHandler}>About Me<br/></Link>
+          <Link className='burgerLink' activeClass='activeRoute' spy={true} duration={500} smooth={true} offset={-50} to="applications" onClick={this.clickHandler} >Applications</Link>
+          <Link className='burgerLink' activeClass='activeRoute' spy={true} smooth={true} duration={500} offset={-50} onClick={this.clickHandler} to='resume'>Resume<br/></Link>
         </div>
       )
     } else {
@@ -38,16 +75,15 @@ class App extends React.Component{
 
   routerItems = (
     <div>
-      <NavLink className='routeLink' to="/" activeClassName="activeRoute" exact>About Me</NavLink>
-      <NavLink className='routeLink' to="/applications" activeClassName="activeRoute" >Applications</NavLink>
-      <NavLink className='routeLink' to="/resume" activeClassName="activeRoute">Resume</NavLink>
+      <Link className='routeLink' activeClass='activeRoute' spy={true} duration={500} smooth={true} offset={-50} to="about">About Me</Link>
+      <Link className='routeLink' activeClass='activeRoute' spy={true} duration={500} smooth={true} offset={-50} to="applications">Applications</Link>
+      <Link className='routeLink' activeClass='activeRoute' spy={true} duration={500} smooth={true} offset={-50} to="resume" >Resume</Link>
     </div>
           )
 
   render(){
     return(
       <div className="App">
-        <Router>
           <div className='headerRouter' id="myTopnav">
             <span className="logoHeader">
               <img className="logo" alt="dm" src="dmLogo.gif"  height="50"/>
@@ -63,12 +99,11 @@ class App extends React.Component{
             {/* <div id='about'><About /></div>
             <div id='applications'><div className='topSpacer'/><Applications /> </div>
             <div id='resume'><div className='topSpacer'/><Resume /></div> */}
-            <Route exact={true} path="/" component={About} />
-            <Route path="/resume" component={Resume} />
-            <Route path="/applications" component={Applications} />
-          </div>
-        </Router>
+            <Element name ='about'> <About/> </Element>
+            <Element id="applications"> <Applications/> </Element>
+            <Element id='resume'> <Resume/> </Element>
       </div>
+    </div>
     )
   }
 }
