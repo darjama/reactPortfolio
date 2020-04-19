@@ -36,11 +36,12 @@
   max-width: 100px;
   width: 100%;
   justify-content: center;
+  transition: all, .3s ease-out;
 }
 
 .contactButton:hover {
   border: 2px solid cornflowerblue;
   color: cornflowerblue;
   transform: scale(1.05);
-  transition: all, .3s
+  transition: all, .2s ease-in;
 }
