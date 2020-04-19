@@ -114,13 +114,14 @@ img.logo {
   display:flex;
   flex-direction: column;
   background-color: #555;
+  position: fixed;
   right: 0;
+  top:50;
   text-align: left;
   padding: 10px 12px;
   font-size: 20px;
   height: 100px;
   width: 150px;
-  position: absolute;
   z-index: 2;
   transition: height .3s;
 }
