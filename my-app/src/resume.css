@@ -18,3 +18,15 @@ button:hover{
   display: flex;
   justify-content: center;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100%;
+}
+
+.innerContainer{
+  margin: auto;
+  max-width: 800px;
+}
