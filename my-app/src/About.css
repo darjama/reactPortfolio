@@ -1,25 +1,16 @@
 .aboutMain {
   margin: -5px 0px 0px;
   padding: 10px 5px 5px;
-
-  background-image: linear-gradient(to bottom, rgba(62, 90, 248, 0.52), rgba(255, 255, 255, 1)), url("blue_diamonds.jpg");
-  background-position: top;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
 }
 
 .aboutTitle {
   font-weight: 999;
   font-size: 48px;
-  margin: -25px;
-  padding:-20px;
 }
 
 .aboutTitle2 {
   font-weight:800;
   font-size: 36px;
-  margin: -5px;
-  padding:-5px;
 }
 
 .contactButtons {
@@ -29,27 +20,74 @@
 }
 
 .contactButton {
-  border: 2px solid slategray;
+  border: 2px solid white;
+  color: white;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
   max-width: 100px;
-  width: 100%;
+  width: 140px;
   justify-content: center;
   transition: all, .3s ease-out;
 }
 
 .contactButton:hover {
   border: 2px solid cornflowerblue;
+  background: rgba(255, 255, 255, 0.6);
   color: cornflowerblue;
   transform: scale(1.05);
   transition: all, .2s ease-in;
 }
 
 a:link {
-  color: black;
+  color: white;
 }
 
 a:visited {
-  color: black;
+  color: white;
+}
+
+.masthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 66vh; /* if you don't want it to take up the full screen, reduce this number */
+  overflow: hidden;
+  background-size: cover;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%), url(coyoteHills.jpg) no-repeat center center scroll;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  color: #eee;
+  font-size: 11vmin;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  color: #eee;
+  font-size: 7vmin;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-top: 40px;
+}
+.mastText {
+  font-style: normal;
+  font-weight: bold;
+  color: #eee;
+  font-size: 2.45vmin;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-top: 40px;
 }

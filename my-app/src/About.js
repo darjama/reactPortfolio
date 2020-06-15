@@ -5,32 +5,37 @@ import { AiOutlineLinkedin } from 'react-icons/ai';
 const About = () => {
   return (
     <div className='aboutMain'>
-      <br/>
-      <span className='aboutTitle'>Daryl Marco</span><br/>
-      <span className='aboutTitle2'>Portfolio</span>
-      <p>Thank you for visiting my software development portfolio. I hope you like what you see.</p>
-      <p>You can contact me via the following</p>
+      <div className="masthead" role="img" ariaLabel="Coyote Hills Landscape">
+        <h1 className="aboutTitle"> Daryl Marco </h1>
+        <h2 className="aboutTitle2"> Portfolio </h2>
+        <p className="mastText">
+          Thank you for visiting my software development portfolio. I hope you like what you see.
+          </p>
+          <br/>
+      <p className="mastText">You can contact me via:</p>
       <div className='contactButtons'>
-        <span className='contactButton'>
-          <a href="mailto://darmarco@gmail.com" target="_blank">
-            <FiMail size="1.5em"/><br/>email
-          </a>
-        </span>
-        <span className='contactButton' >
-          <a href="tel://12023787795" target="_blank">
+        <a href="mailto://darmarco@gmail.com" target="_blank" rel='noopener noreferrer'>
+          <div className='contactButton'>
+              <FiMail size="1.5em"/><br/>email
+          </div>
+        </a>
+        <a href="tel://12023787795" target="_blank" rel='noopener noreferrer'>
+        <div className='contactButton' >
+
             <FiPhone size="1.5em"/><br/>phone
-          </a>
-        </span>
-        <span className='contactButton'>
-          <a href="https://www.linkedin.com/in/darylmarco/" target="_blank">
-            <AiOutlineLinkedin size="1.5em"/><br/>LinkedIn
-          </a>
-        </span>
-        <span className='contactButton'>
-          <a href="https://github.com/darjama" target="_blank">
+        </div>
+        </a>
+        <a href="https://www.linkedin.com/in/darylmarco/" target="_blank" rel='noopener noreferrer'>
+          <div className='contactButton'>
+              <AiOutlineLinkedin size="1.5em"/><br/>LinkedIn
+          </div>
+        </a>
+        <a href="https://github.com/darjama" target="_blank" rel='noopener noreferrer'>
+        <div className='contactButton'>
             <FiGithub size="1.5em"/><br/>GitHub
-          </a>
-        </span>
+        </div>
+        </a>
+        </div>
       </div>
     </div>
   )
