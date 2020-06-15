@@ -52,8 +52,8 @@
 
 .route {
   top: 50px;
-  width: 100%;
-  padding: 0px;
+  padding: -2px;
+  margin: -10px;
   z-index: -1;
 }
 

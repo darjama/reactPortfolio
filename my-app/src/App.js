@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element, Events, scrollSpy } from 'react-scroll'
 import About from './About.js';
 import './App.css';
 
