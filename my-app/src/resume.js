@@ -17,7 +17,10 @@ const Resume = () => {
             scale={1.25}
             hideNavbar={true}
         />
+        <br/>
         </div>
+        <br/>
+        <br/>
         </div>
 
     )
