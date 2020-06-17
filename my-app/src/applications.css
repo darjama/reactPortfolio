@@ -18,44 +18,54 @@
   padding: 6px;
   justify-content: center;
   background-color: white;
-  position: relative;
-  top: -470px;
+  z-index: 2;
 }
 
 .appBody{
-  display: grid;
-  flex-grow: 2;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(107, 159, 255, 0.25);
   min-width: 550px;
   width: 80%;
-  height: 450px;
+  min-height: 450px;
   margin: 20px 5px 1px 1px;
   padding: 30px 10px 10px 10px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto 30px;
+  overflow: scroll;
+  position: relative;
+  top: -50px;
 }
 
 .appImage{
-  grid-column: 1;
-  grid-row: 1 2;
-  margin: -27px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   text-align: left;
+  width: 300px;
+  flex-shrink: 1;
+  flex-grow: 1;
+
 }
+
 .appText{
-  grid-column: 2;
-  grid-row: 1;
-  margin: 5px 0px 0px 35px;
+  padding: 20px 5px 5px 5px;
   text-align: left;
+  font-weight: 500;
+  width: 300px;
+  flex-shrink: 2;
+  flex-grow: 2;
 }
 
-.appText ul{
+.appText > ul{
   list-style: circle outside;
+  padding-left: 25px;
 }
 
-.appText li{
-  margin: .75em 0em;
+.appText > li{
+  margin: .5em 0em;
 }
 
-.appText .innerList li{
-  margin: 0em;
+.appText .innerList  > li{
+  margin-top: -.25em;
+  margin-left: -10px;
 }
 

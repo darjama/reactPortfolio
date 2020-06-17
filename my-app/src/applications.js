@@ -7,9 +7,10 @@ const Applications = () => {
         <p>
         Here is a collection of software applications I've worked on:
         </p>
+        <div className='appTitle'>SofaMart</div>
         <div className='appBody'>
           <div className='appImage'>
-            <img src="./sofamart.gif" mode="fit" alt="sofamart animated GIF"/>
+            <img src="./sofamart.gif" alt="sofamart animated GIF"/>
           </div>
           <div className='appText'><ul>
             <li>Technologies Used:
@@ -30,13 +31,20 @@ const Applications = () => {
           </ul>
           </div>
         </div>
-        <div className='appTitle'>SofaMart</div>
-        <div className='appBody' background='./dmLogo.gif'>appBody</div>
         <div className='appTitle'>Craftworkery</div>
-        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+        <div className='appBody' background='./dmLogo.gif'>
+          <div className='appImage'>
+            <img src="./sofamart.gif" alt="sofamart animated GIF"/>
+          </div>
+          <div className='appText'>
+            <ul></ul>
+          </div>
+        </div>
         <div className='appTitle'>My New Fave</div>
         <div className='appBody' background='./dmLogo.gif'>appBody</div>
         <div className='appTitle'>ConnectSquares</div>
+        <div className='appBody' background='./dmLogo.gif'>appBody</div>
+
       </div>
     )
 }
