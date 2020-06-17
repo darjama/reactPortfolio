@@ -11,12 +11,13 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-  background: #555;
+  background-image: linear-gradient(to bottom, rgba(85, 85, 85, 0.8), rgba(85, 85, 85, 0.4));
+
   color: #f1f1f1;
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   overflow: hidden;
   font-size: 17px;
   text-align: right;
