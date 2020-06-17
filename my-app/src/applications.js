@@ -31,18 +31,28 @@ const Applications = () => {
           </ul>
           </div>
         </div>
-        <div className='appTitle'>Craftworkery</div>
-        <div className='appBody' background='./dmLogo.gif'>
+        <div className='appTitle'>ConnectSquares</div>
+        <div className='appBody'>
           <div className='appImage'>
-            <img src="./sofamart.gif" alt="sofamart animated GIF"/>
+            <img src="./c4fun.gif" width="225px" alt="ConnectSquares animated GIF"/>
           </div>
           <div className='appText'>
-            <ul></ul>
+            <ul>
+             <li>Technologies Used:
+              <ul className="innerList" style={{margin: '0px 0px 0px 25px', listStyle: 'disc'}}>
+                <li>React Native</li>
+                <li>CSS</li>
+                <li>Expo-CLI</li>
+              </ul>
+            </li>
+              <li>Created a mobile game using React Native and CSS to try to line up four game pieces</li>
+              <li>Android version compiled to an APK using Expo-CLI</li>
+            </ul>
           </div>
         </div>
         <div className='appTitle'>My New Fave</div>
         <div className='appBody' background='./dmLogo.gif'>appBody</div>
-        <div className='appTitle'>ConnectSquares</div>
+        <div className='appTitle'>Craftworkery</div>
         <div className='appBody' background='./dmLogo.gif'>appBody</div>
 
       </div>

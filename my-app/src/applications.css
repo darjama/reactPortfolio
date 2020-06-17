@@ -39,7 +39,7 @@
 
 .appImage{
   margin: 20px 0px 0px 0px;
-  text-align: left;
+  text-align: center;
   width: 300px;
   flex-shrink: 1;
   flex-grow: 1;
