@@ -1,16 +1,56 @@
-import React from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import './applications.css';
 
 const Applications = () => {
+ const sofaRef = useRef(null);
+ const c4Ref = useRef(null);
+ const ynfRef = useRef(null);
+ const craftRef = useRef(null);
+ const [sofaAnimate, setSofaAnimate] = useState(false);
+ const [c4Animate, setC4Animate] = useState(false);
+//  const [ynfAnimate, setYnfAnimate] = useState(false);
+//  const [craftAnimate, setCraftAnimate] = useState(false);
+ var gifSwitch = function(e) {
+  let sofaPos = sofaRef.current.offsetTop - window.pageYOffset;
+  setSofaAnimate(sofaPos < 370 && sofaPos > -145);
+  let c4Pos = c4Ref.current.offsetTop - window.pageYOffset;
+  setC4Animate(c4Pos < 370 && c4Pos > -145);
+ }
+const debounce = (func, delay) => {
+    let debounceTimer;
+    return function() {
+        const context = this;
+        const args = arguments;
+            clearTimeout(debounceTimer)
+                debounceTimer
+            = setTimeout(() => func.apply(context, args), delay)
+    }
+  }
+
+  // const showSofa = useTransition(sofaAnimate, null, {
+  //     from: { position: 'absolute', opacity: 0 },
+  //     enter: { opacity: 1 },
+  //     leave: { opacity: 0 },
+  //     config: config.molasses,
+  //     })
+
+ useEffect(() => {
+  //  sofaRef.current && sofaRef.current.focus();
+  //  c4Ref.current && c4Ref.current.focus();
+  //  ynfRef.current && ynfRef.current.focus();
+  //  craftRef.current && craftRef.current.focus();
+   window.addEventListener('scroll', debounce(gifSwitch,100))
+  });
     return (
-      <div className="applications">
-        <p>
-        Here is a collection of software applications I've worked on:
-        </p>
-        <div className='appTitle'>SofaMart</div>
+      <div className="applications" onScroll={gifSwitch}>
+
+
+        <div className="sectionBar">
+          <div className="sectionTitle">Applications</div>
+        </div>
+        <div className='appTitle' ref={sofaRef}>SofaMart</div>
         <div className='appBody'>
-          <div className='appImage'>
-            <img src="./sofamart.gif" alt="sofamart animated GIF"/>
+          <div className={sofaAnimate ? 'appIGoSofa appImage' : 'appImage appISofa'}>
           </div>
           <div className='appText'><ul>
             <li>Technologies Used:
@@ -31,10 +71,9 @@ const Applications = () => {
           </ul>
           </div>
         </div>
-        <div className='appTitle'>ConnectSquares</div>
+        <div className='appTitle'  ref={c4Ref}>ConnectSquares</div>
         <div className='appBody'>
-          <div className='appImage'>
-            <img src="./c4fun.gif" width="225px" alt="ConnectSquares animated GIF"/>
+          <div className={c4Animate ? 'appIGoC4 appImage' : 'appImage appIC4'}>
           </div>
           <div className='appText'>
             <ul>
@@ -50,9 +89,9 @@ const Applications = () => {
             </ul>
           </div>
         </div>
-        <div className='appTitle'>My New Fave</div>
+        <div className='appTitle'  ref={ynfRef}>My New Fave</div>
         <div className='appBody' background='./dmLogo.gif'>appBody</div>
-        <div className='appTitle'>Craftworkery</div>
+        <div className='appTitle' ref={craftRef}>Craftworkery</div>
         <div className='appBody' background='./dmLogo.gif'>appBody</div>
 
       </div>

@@ -21,11 +21,40 @@
   z-index: 2;
 }
 
+.sectionTitle {
+  border: 2px solid darkgray;
+  border-radius:  20px;
+  width: 175px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 3px;
+  justify-content: right;
+  background-color: white;
+  z-index: 2;
+  margin: -25px 0 50px 30px;
+}
+
+.sectionBar {
+  border: 1px solid darkgray;
+  border-radius:  20px;
+  min-width: 100%;
+  min-height: 2px;
+  max-height: 2px;
+  justify-content: right;
+  background: color(darkgray);
+  background-size: 100% 100%;
+  z-index: 1;
+  overflow: visible;
+  margin: 40px 0 20px 0;
+
+}
+
 .appBody{
   display: flex;
   flex-flow: row wrap;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
   background-color: rgba(107, 159, 255, 0.25);
   min-width: 550px;
   width: 80%;
@@ -39,11 +68,34 @@
 
 .appImage{
   margin: 20px 0px 0px 0px;
+  border-radius: 5px;
   text-align: center;
-  width: 300px;
+  min-width: 300px;
+  min-height: 300px;
   flex-shrink: 1;
   flex-grow: 1;
+  transition: background 1s ease-in;
+  background-size: 100%;
+}
 
+.appISofa{
+  background: url(stillSofa.jpg) no-repeat;
+  background-size: 100%;
+}
+
+.appIGoSofa{
+  background: url(sofamart.gif) no-repeat;
+  background-size: 100%;
+}
+
+.appIC4{
+  background: url(c4AStill.jpg) no-repeat center;
+  background-size: auto 100%;
+}
+
+.appIGoC4{
+  background: url(c4fun.gif) no-repeat center;
+  background-size: auto 100%;
 }
 
 .appText{
